@@ -1,20 +1,27 @@
 # Write a Grok Bot Skill Twice
 
-> Part of [Fresh Off the Crown](../../README.md) · *Does this capability earn a place in how I actually work?*
+> Part of [Fresh Off the Crown](../../README.md) · *A daily practice deciding what earns a place in the work.*
 
-**Subject:** Grok Bot · **Theme:** tool contracts · **Verdict:** WATCH
+## Overview
 
-## The Friction
+Producing the weekly newsletter issue by hand has one step with no tooling under it: finding candidates and triaging them. Nothing sits between reading a source and deciding an item belongs, so every call about whether a candidate has a real primary source or is recent enough goes unrecorded, and two runs a week apart can apply different standards with nothing catching the drift.
 
-Producing the weekly newsletter issue by hand, specifically the finding-and-triaging step. Nothing sits between reading a source and deciding an item belongs, so every call about whether a candidate has a real primary source or is recent enough goes unrecorded.
+This build tests whether a Grok Bot skill can hold that contract in writing. Two versions of one curation skill were run against the same batch: Version A with four fields as a baseline and no explicit rules for missing sources, stale content, or borderline calls, and Version B adding two more, validation criteria for source and date plus approval boundaries requiring the Bot to ask before including borderline material or sending anything outward. The batch carried planted failures with expected outcomes written down first, so the score could not be decided afterward by whether an article felt weak.
 
-**Before:** the triage step is fully manual with no written contract, so two runs a week apart can apply different standards and nothing catches the drift.
+The run produced a null result, and that is the finding. Both versions recorded 0 of 2 planted items, but neither received the numbered batch, so neither returned a shortlist at all. Equal counts here mean no exposure rather than two correct rejections, and reading them as a clean pass is exactly the mistake this practice exists to catch. What did hold was narrower: once "primary source" was defined as independent reporting rather than a vendor press release, and the 7-day window as inclusive of both boundary dates, a rerun of the borderline cases returned the intended decisions with no second edit. The verdict is **WATCH**, with a re-check on 2026-08-29 to run both versions against the same numbered batch and require a returned shortlist from each. The reversal trigger: if Version B's shortlist then matches Version A's on the planted items, the two extra fields are ceremony rather than control and they come out.
 
-## The Build
+```
+Run record
+2026-08-23 | Grok Bot, beta, via SuperGrok subscription
+           | Weekly Curation A (four fields) and B (six fields), each pointed at a
+             12-item batch with two planted failures and two borderline cases
+           | A: 0 of 2 planted items. B: 0 of 2. Neither version received the numbered
+             batch, so neither returned a shortlist. Borderline wording rerun separately
+             DID return the intended decisions: Item C excluded, Item D kept
+           | WATCH
+```
 
-Two versions of one curation skill, and a batch built to catch the difference. Version A used four fields as a baseline with no explicit rules for missing sources, stale content, or borderline calls. Version B added two: validation criteria for source and date, and approval boundaries requiring the Bot to ask before including borderline material or sending anything outward.
-
-The batch carried planted failures with expected outcomes written down first, so the score could not be decided afterward by whether an article felt weak.
+## Architecture
 
 ```mermaid
 ---
@@ -112,30 +119,30 @@ flowchart TD
     class Operator,Answer io
 ```
 
-Full walkthrough with screenshots in [`documents/grok-bot-skill-contract.md`](./documents/grok-bot-skill-contract.md).
+The diagram shows the topology and data flow of the system as built. The full architectural narrative, with screenshots and prose, lives in [`documents/grok-bot-skill-contract.md`](./documents/grok-bot-skill-contract.md).
 
-## The Run Record
+## Implementation
 
-```
-2026-08-23 | Grok Bot, beta, via SuperGrok subscription
-           | Weekly Curation A (four fields) and B (six fields), each pointed at a
-             12-item batch with two planted failures and two borderline cases
-           | A: 0 of 2 planted items. B: 0 of 2. Neither version received the numbered
-             batch, so neither returned a shortlist at all. Borderline wording rerun
-             separately DID return the intended decisions: Item C excluded, Item D kept
-           | WATCH
-```
+This system is built across **7 phases**:
 
-**The equal counts are not a result.** A version that rejects both flawed items should also process the rest and return a valid shortlist. Neither did, so 0 of 2 means no exposure rather than two correct rejections. Reading that as a perfect score is the mistake this repo exists to catch.
+1. Project Overview: Building an AI Curation Bot
+2. Setting Up the Curation Bot
+3. Designing the Test Batch
+4. Running Version A: Four-Field Curation Skill
+5. Running Version B: Six-Field Curation Skill
+6. Scoring the Results: Pass or Fail
+7. Going Further: Scaling to 12 Items
 
-## The Verdict
+For the full walkthrough with screenshots and step-by-step content, see [`documents/grok-bot-skill-contract.md`](./documents/grok-bot-skill-contract.md).
 
-**WATCH.** The six fields were kept on the control they state, not on anything this run measured. The claim under test, that explicit validation fields reduce flawed items reaching the shortlist, is unproven: the fields were never exercised against the planted failures.
+## Validation
 
-What did hold is narrower. Once "primary source" meant independent reporting rather than a vendor press release, and the 7-day window was defined as inclusive of both boundary dates, a rerun of the borderline cases returned the intended decisions with no second edit. Precise wording at the category edge is the part that survived.
+Each build phase below is documented in [`documents/grok-bot-skill-contract.md`](./documents/grok-bot-skill-contract.md), with screenshots, configuration, and notes as captured during the build:
 
-**Re-check 2026-08-29:** run both versions against the same numbered batch, require a returned shortlist from each, and compare which planted items survived and why.
-
-**Reversal trigger:** if the full side-by-side shows B's shortlist matching A's on the planted items, the two extra fields are ceremony rather than control, and they come out.
-
-The execution lesson generalizes past this tool. A saved skill and a prepared batch are not a comparison until the candidates are sent and a shortlist comes back, and that gap is invisible in a results table because it looks identical to a clean pass.
+- ✅ Project Overview: Building an AI Curation Bot
+- ✅ Setting Up the Curation Bot
+- ✅ Designing the Test Batch
+- ✅ Running Version A: Four-Field Curation Skill
+- ✅ Running Version B: Six-Field Curation Skill
+- ✅ Scoring the Results: Pass or Fail
+- ✅ Going Further: Scaling to 12 Items
