@@ -1,22 +1,20 @@
 # Write a Grok Bot Skill Twice
 
-> Entry in [Fresh Off the Crown](../../README.md) · *Does this capability earn a place in how I actually work?*
+> Part of [Fresh Off the Crown](../../README.md) · *Does this capability earn a place in how I actually work?*
 
-**Subject:** Grok Bot skills · **Theme:** tool contracts · **Verdict:** WATCH
+**Subject:** Grok Bot · **Theme:** tool contracts · **Verdict:** WATCH
 
 ## The Friction
 
-Producing the weekly newsletter issue by hand, specifically the finding-and-triaging step. It runs every week, and there is currently nothing between reading a source and deciding an item belongs. Every judgment call about whether a candidate has a real primary source, or whether it is recent enough to run, is made in my head and left unrecorded.
+Producing the weekly newsletter issue by hand, specifically the finding-and-triaging step. Nothing sits between reading a source and deciding an item belongs, so every call about whether a candidate has a real primary source or is recent enough goes unrecorded.
 
-**Before:** the triage step is fully manual and has no written contract, so two runs a week apart can apply different standards without anything catching the drift.
-
-The capability under test is whether a Grok Bot skill can hold that contract. Not whether it can summarize, which is easy, but whether explicit validation fields make it reject the things a newsletter should reject.
+**Before:** the triage step is fully manual with no written contract, so two runs a week apart can apply different standards and nothing catches the drift.
 
 ## The Build
 
-Two versions of the same curation skill, and a batch built to catch the difference. Version A used four fields as a baseline with no explicit rules for missing sources, stale content, or borderline calls. Version B added two fields: validation criteria for source and date, and approval boundaries requiring the Bot to ask before including borderline material or sending anything outward.
+Two versions of one curation skill, and a batch built to catch the difference. Version A used four fields as a baseline with no explicit rules for missing sources, stale content, or borderline calls. Version B added two: validation criteria for source and date, and approval boundaries requiring the Bot to ask before including borderline material or sending anything outward.
 
-The batch carried planted failures with expected outcomes written down first, so the score could not be decided after the fact by whether an article felt weak.
+The batch carried planted failures with expected outcomes written down first, so the score could not be decided afterward by whether an article felt weak.
 
 ```mermaid
 ---
@@ -114,32 +112,30 @@ flowchart TD
     class Operator,Answer io
 ```
 
+Full walkthrough with screenshots in [`documents/grok-bot-skill-contract.md`](./documents/grok-bot-skill-contract.md).
+
 ## The Run Record
 
 ```
-2026-08-22 | Grok Bot, beta, via SuperGrok subscription
-           | Weekly Curation A (four fields) and Weekly Curation B (six fields),
-             each pointed at a 12-item candidate batch with two planted failures
-             and two borderline cases
-           | A: 0 of 2 planted items in a shortlist. B: 0 of 2 planted items in a
-             shortlist. Neither version received the numbered batch for scoring, so
-             neither returned a shortlist at all. Borderline wording rerun separately
-             DID return the intended decisions: Item C excluded, Item D retained
+2026-08-23 | Grok Bot, beta, via SuperGrok subscription
+           | Weekly Curation A (four fields) and B (six fields), each pointed at a
+             12-item batch with two planted failures and two borderline cases
+           | A: 0 of 2 planted items. B: 0 of 2. Neither version received the numbered
+             batch, so neither returned a shortlist at all. Borderline wording rerun
+             separately DID return the intended decisions: Item C excluded, Item D kept
            | WATCH
 ```
 
-**The equal counts are not a result.** A version that rejects both flawed items should also process the remaining candidates and return a valid shortlist. Neither did, so 0 of 2 means no exposure rather than two correct rejections. Reading that number as a perfect score is exactly the mistake this repo exists to catch, and it is recorded here rather than smoothed over.
-
-Build time was roughly 40 minutes. The hardest part was writing validation criteria that survive borderline cases without discarding content that meets the intended rule.
+**The equal counts are not a result.** A version that rejects both flawed items should also process the rest and return a valid shortlist. Neither did, so 0 of 2 means no exposure rather than two correct rejections. Reading that as a perfect score is the mistake this repo exists to catch.
 
 ## The Verdict
 
-**WATCH.** The six fields were kept, but on the control they state rather than on anything this run measured. The claim under test, that explicit validation fields reduce the number of flawed items reaching the shortlist, is still unproven, and the fields were never exercised against the planted failures.
+**WATCH.** The six fields were kept on the control they state, not on anything this run measured. The claim under test, that explicit validation fields reduce flawed items reaching the shortlist, is unproven: the fields were never exercised against the planted failures.
 
-What the run did establish is narrower and still worth having. Once "primary source" was defined as independent reporting rather than a vendor press release, and the 7-day window was defined as inclusive of both boundary dates, a rerun of the borderline cases returned the intended decisions with no second edit. Precise wording at the category edge is the part that held.
+What did hold is narrower. Once "primary source" meant independent reporting rather than a vendor press release, and the 7-day window was defined as inclusive of both boundary dates, a rerun of the borderline cases returned the intended decisions with no second edit. Precise wording at the category edge is the part that survived.
 
-**Re-check: 2026-08-29.** Run both versions against the same numbered 12-item batch, require a returned shortlist from each, and compare which planted items survived and why.
+**Re-check 2026-08-29:** run both versions against the same numbered batch, require a returned shortlist from each, and compare which planted items survived and why.
 
-**Reversal trigger:** if the full side-by-side shows Version B's shortlist matching Version A's on the planted items, the two extra fields are ceremony rather than control, and they come back out.
+**Reversal trigger:** if the full side-by-side shows B's shortlist matching A's on the planted items, the two extra fields are ceremony rather than control, and they come out.
 
-The execution lesson generalizes past this tool. A saved skill and a prepared batch do not constitute a comparison until the candidates are actually sent and a shortlist actually comes back. That gap is invisible in a result table, because it looks identical to a clean pass.
+The execution lesson generalizes past this tool. A saved skill and a prepared batch are not a comparison until the candidates are sent and a shortlist comes back, and that gap is invisible in a results table because it looks identical to a clean pass.
