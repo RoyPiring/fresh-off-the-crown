@@ -1,6 +1,6 @@
 # Fresh Off the Crown
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-1B4332?style=flat-square&labelColor=0d1117)](./LICENSE) [![Practice](https://img.shields.io/badge/AI%20Tooling-Practice-C2185B?style=flat-square&labelColor=0d1117)](https://github.com/RoyPiring) [![Verdicts](https://img.shields.io/badge/verdicts-1-2F5233?style=flat-square&labelColor=0d1117)](./INDEX.md) [![Updated](https://img.shields.io/badge/updated-2026--08--22-264653?style=flat-square&labelColor=0d1117)](./INDEX.md)
+[![License: MIT](https://img.shields.io/badge/license-MIT-1B4332?style=flat-square&labelColor=0d1117)](./LICENSE) [![Practice](https://img.shields.io/badge/AI%20Tooling-Practice-C2185B?style=flat-square&labelColor=0d1117)](https://github.com/RoyPiring) [![Verdicts](https://img.shields.io/badge/verdicts-1%20%2F%20100-2F5233?style=flat-square&labelColor=0d1117)](./INDEX.md) [![Updated](https://img.shields.io/badge/updated-2026--08--22-264653?style=flat-square&labelColor=0d1117)](./INDEX.md)
 
 > *Does this capability earn a place in how I actually work?*
 
@@ -77,4 +77,4 @@ Missing days costs a row, not a debt. A practice that accrues perishable obligat
 
 ## The ledger
 
-**1 verdict logged.** There is no finish line here and no target number, because a practice with a quota is a practice with a fabrication problem. What matters is that the run happened, the verdict is honest, and the friction list is shorter than it was. Browse what has shipped in [`INDEX.md`](./INDEX.md).
+**1 of 100 logged.** One verdict at a time, at most one a day, on a run to 100 recorded decisions. The count moves only when a run actually happened: a day with no qualifying candidate is a recorded outcome rather than a gap, and it never gets backfilled to keep a streak alive. What matters is that the run happened, the verdict is honest, and the friction list is shorter than it was. Browse what has shipped in [`INDEX.md`](./INDEX.md).

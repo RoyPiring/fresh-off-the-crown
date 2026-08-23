@@ -10,7 +10,7 @@ Every row below is one decision with a build behind it. The verdict is the outpu
 |--:|---|---|---|---|---|---|
 | 1 | [Write a Grok Bot Skill Twice](./entries/grok-bot-skill-contract/) | Grok Bot | tool contracts | Weekly newsletter triage, done by hand with no written contract | **WATCH** | 2026-08-22 |
 
-**1 verdict logged.** No target and no finish line. A quiet day is a recorded outcome, not a gap.
+**1 of 100 logged.** A quiet day is a recorded outcome, not a gap, and the count is never backfilled to protect a streak.
 
 ## How to read a row
 
