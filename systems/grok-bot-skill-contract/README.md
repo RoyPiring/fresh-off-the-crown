@@ -4,22 +4,11 @@
 
 ## Overview
 
-Producing the weekly newsletter issue by hand has one step with no tooling under it: finding candidates and triaging them. Nothing sits between reading a source and deciding an item belongs, so every call about whether a candidate has a real primary source or is recent enough goes unrecorded, and two runs a week apart can apply different standards with nothing catching the drift.
+Producing the weekly newsletter has one step with no tooling under it: finding candidates and triaging them. Nothing sits between reading a source and deciding an item belongs, so every call about whether a candidate has a real primary source or is recent enough goes unrecorded, and two runs a week apart can apply different standards with nothing catching the drift.
 
-This build tests whether a Grok Bot skill can hold that contract in writing. Two versions of one curation skill were run against the same batch: Version A with four fields as a baseline and no explicit rules for missing sources, stale content, or borderline calls, and Version B adding two more, validation criteria for source and date plus approval boundaries requiring the Bot to ask before including borderline material or sending anything outward. The batch carried planted failures with expected outcomes written down first, so the score could not be decided afterward by whether an article felt weak.
+This build tests whether a Grok Bot skill can hold that contract in writing. Two versions of one curation skill ran against the same batch: Version A with four fields and no explicit rules for missing sources, stale content, or borderline calls, and Version B adding validation criteria for source and date plus approval boundaries requiring the Bot to ask before including borderline material. The batch carried planted failures with expected outcomes written down first, so the score could not be decided afterward by whether an article felt weak.
 
-The run produced a null result, and that is the finding. Both versions recorded 0 of 2 planted items, but neither received the numbered batch, so neither returned a shortlist at all. Equal counts here mean no exposure rather than two correct rejections, and reading them as a clean pass is exactly the mistake this practice exists to catch. What did hold was narrower: once "primary source" was defined as independent reporting rather than a vendor press release, and the 7-day window as inclusive of both boundary dates, a rerun of the borderline cases returned the intended decisions with no second edit. The verdict is **WATCH**, with a re-check on 2026-08-29 to run both versions against the same numbered batch and require a returned shortlist from each. The reversal trigger: if Version B's shortlist then matches Version A's on the planted items, the two extra fields are ceremony rather than control and they come out.
-
-```
-Run record
-2026-08-23 | Grok Bot, beta, via SuperGrok subscription
-           | Weekly Curation A (four fields) and B (six fields), each pointed at a
-             12-item batch with two planted failures and two borderline cases
-           | A: 0 of 2 planted items. B: 0 of 2. Neither version received the numbered
-             batch, so neither returned a shortlist. Borderline wording rerun separately
-             DID return the intended decisions: Item C excluded, Item D kept
-           | WATCH
-```
+The run produced a null result, and that is the finding. Both versions recorded 0 of 2 planted items, but neither received the numbered batch, so neither returned a shortlist at all. Equal counts here mean no exposure rather than two correct rejections, and reading them as a clean pass is the mistake this practice exists to catch. What did hold was narrower: once "primary source" meant independent reporting rather than a vendor press release, and the 7-day window was defined as inclusive of both boundary dates, a rerun of the borderline cases returned the intended decisions with no second edit. Verdict **WATCH**, re-check 2026-08-29 with a batch that actually reaches both versions. If Version B's shortlist then matches Version A's on the planted items, the two extra fields are ceremony and come out.
 
 ## Architecture
 

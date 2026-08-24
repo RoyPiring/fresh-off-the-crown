@@ -4,29 +4,11 @@
 
 ## Overview
 
-Reading agent output is most of the working day, and "this answer feels clearer" is not a reason to change a setting. The friction is that output style gets chosen on impression rather than evidence, so a change that quietly drops something load-bearing looks the same as one that only trims padding.
+Reading agent output is most of the working day, and "this answer feels clearer" is not a reason to change a setting. Output style gets chosen on impression rather than evidence, so a change that quietly drops something load-bearing looks the same as one that only trims padding. Nothing separated answer length from factual coverage.
 
-**Before:** no way to tell compression from information loss, because nothing separated answer length from factual coverage.
+The test locks the grading rules before anything runs. A sample codebase, six prompts, and three required items per prompt make 18 fixed facts, defined in advance so they cannot be revised after seeing which answer reads better. Scoring is strict: implication does not count, and saying the code "gives up after 3 tries" fails unless the answer also states that the failure is silent, with no exception and no log. Line count then measures how much text each style spends delivering those facts.
 
-The test locks the grading rules before anything runs. A sample codebase, six prompts, and three required items per prompt make 18 fixed facts, defined in advance so they cannot be revised after seeing which answer reads better. Scoring is strict: implication does not count, and saying the code "gives up after 3 tries" fails the item unless the answer also states that the failure is silent, with no exception and no log. Line count then measures how much text each style spends delivering those facts.
-
-The measured result is a clean compression. Default used 37 lines and Concise 22, a 41% reduction, and both retained 18 of 18 required items with every prompt at 3/3. What disappeared was preamble, repeated context, and secondary advice. The custom output style written afterward is the one that actually earned the setting change: on the two prompts tested it ran 10 lines against Default's 15 while keeping two details neither scorecard asked for, that HTTP 429 is a retryable 4xx and that `timeout=30` applies per attempt, so a hanging server costs about 90s per SKU rather than 7. Neither detail was scored, and both change the next action.
-
-The limits matter as much as the numbers, and three are named rather than discovered later. The Concise answers were written tersely inside the Default session instead of under a loaded `outputStyle: Concise` prompt, so this measures deliberate compression rather than the configured style in isolation. Half the rows were graded against a `report.py` reconstructed from the answer key. And because both styles scored perfectly, the metric could not discriminate between them at all: all 18 items were concrete, locatable code facts, and none tested a caveat, a refusal, an uncertainty statement, or a safety boundary, which are exactly the things most likely to vanish under compression.
-
-The verdict is **ADOPT**, scoped to the custom output style for code-explanation work, because it is the variant that delivered the compression while keeping decision-relevant context that both stock styles dropped unscored. **Reversal trigger:** a harder prompt set whose required items include a caveat, a refusal, or a safety boundary, showing the custom style dropping one. That set is the next build.
-
-```
-Run record
-2026-08-23 | Claude Code, Default and Concise output styles, plus a custom style
-             defined in Markdown with YAML frontmatter
-           | Six fixed prompts against one sample codebase, 18 pre-committed required
-             items, scored per prompt and measured by line count
-           | Default 37 lines, 18/18. Concise 22 lines, 18/18, a 41% reduction.
-             Custom style 10 lines against Default 15 on prompts 1 and 4, 6/6 required
-             items, and two unscored decision details retained
-           | ADOPT
-```
+Default used 37 lines and Concise 22, a 41% reduction, with both retaining 18 of 18 required items. What disappeared was preamble, repeated context, and secondary advice. The custom output style written afterward is the one that earned the change: on the two prompts tested it ran 10 lines against Default's 15 while keeping two details neither scorecard asked for, that HTTP 429 is a retryable 4xx and that `timeout=30` applies per attempt, so a hanging server costs about 90s per SKU rather than 7. Three limits are named rather than discovered later: the Concise answers came from the Default session instead of a loaded `outputStyle` prompt, half the rows were graded against a reconstructed `report.py`, and because both styles scored perfectly the metric could not discriminate at all. Verdict **ADOPT** for the custom style, reversed if a prompt set whose required items include a caveat or refusal shows it dropping one.
 
 ## Architecture
 
