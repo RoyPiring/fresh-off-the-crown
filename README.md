@@ -1,6 +1,6 @@
 # Fresh Off the Crown
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-1B4332?style=flat-square&labelColor=0d1117)](./LICENSE) [![Practice](https://img.shields.io/badge/AI%20Tooling-Practice-7E3FF2?style=flat-square&labelColor=0d1117)](https://github.com/RoyPiring) [![Systems](https://img.shields.io/badge/systems-2-2F5233?style=flat-square&labelColor=0d1117)](./INDEX.md) [![Updated](https://img.shields.io/badge/updated-2026--08--23-264653?style=flat-square&labelColor=0d1117)](./INDEX.md)
+[![License: MIT](https://img.shields.io/badge/license-MIT-1B4332?style=flat-square&labelColor=0d1117)](./LICENSE) [![Practice](https://img.shields.io/badge/AI%20Tooling-Practice-7E3FF2?style=flat-square&labelColor=0d1117)](https://github.com/RoyPiring) [![Systems](https://img.shields.io/badge/systems-3-2F5233?style=flat-square&labelColor=0d1117)](./INDEX.md) [![Updated](https://img.shields.io/badge/updated-2026--08--24-264653?style=flat-square&labelColor=0d1117)](./INDEX.md)
 
 > *Does this capability earn a place in how I actually work? A decision log with a build attached.*
 
@@ -10,6 +10,7 @@ The AI tooling landscape ships more good news than any working engineer can act 
 
 - **[Write a Grok Bot Skill Twice](./systems/grok-bot-skill-contract/)**: a four-field and a six-field curation skill run against the same batch of planted failures, where the equal scores turned out to be a null result rather than a clean pass.
 - **[Measure What Concise Drops](./systems/measure-what-concise-drops/)**: six prompts and 18 pre-committed facts measuring whether a shorter output style drops anything, where the 41% cut cost no scored fact and a custom style kept two unscored details that change the next action.
+- **[Three Layers, One Model](./systems/default-model-precedence/)**: four config layers set to disagree to find which one actually picks the model, where three identical-looking results turned out to have three different causes.
 
 More land here as I build them, one at a time.
 
@@ -21,4 +22,4 @@ Capabilities inside tools already in daily use, plus the vendor-independent part
 
 ## The road to 100
 
-**2 shipped, 98 to go.** The count moves only when a run actually happened, and it is never backfilled to keep a streak alive: **[browse the catalog in `INDEX.md`](./INDEX.md)**.
+**3 shipped, 97 to go.** The count moves only when a run actually happened, and it is never backfilled to keep a streak alive: **[browse the catalog in `INDEX.md`](./INDEX.md)**.
