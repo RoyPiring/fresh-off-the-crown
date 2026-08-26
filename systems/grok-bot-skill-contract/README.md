@@ -108,7 +108,7 @@ flowchart TD
     class Operator,Answer io
 ```
 
-The diagram shows the topology and data flow of the system as built. The full architectural narrative, with screenshots and prose, lives in [`documents/grok-bot-skill-contract.md`](./documents/grok-bot-skill-contract.md).
+The diagram shows the topology and data flow of the system as built. The captured evidence for this run, including screenshots of what the tools actually returned, lives in [`documents/grok-bot-skill-contract.md`](./documents/grok-bot-skill-contract.md).
 
 ## Implementation
 
@@ -122,11 +122,11 @@ This system is built across **7 phases**:
 6. Scoring the Results: Pass or Fail
 7. Going Further: Scaling to 12 Items
 
-For the full walkthrough with screenshots and step-by-step content, see [`documents/grok-bot-skill-contract.md`](./documents/grok-bot-skill-contract.md).
+For the run as it happened, with the screenshots taken at each step, see [`documents/grok-bot-skill-contract.md`](./documents/grok-bot-skill-contract.md).
 
 ## Validation
 
-Each build phase below is documented in [`documents/grok-bot-skill-contract.md`](./documents/grok-bot-skill-contract.md), with screenshots, configuration, and notes as captured during the build:
+Each phase below has its evidence in [`documents/grok-bot-skill-contract.md`](./documents/grok-bot-skill-contract.md), with the screenshots, configuration, and observed results recorded as the run happened:
 
 - ✅ Project Overview: Building an AI Curation Bot
 - ✅ Setting Up the Curation Bot

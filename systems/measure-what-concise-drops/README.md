@@ -100,7 +100,7 @@ flowchart TD
     class Operator,Decision io
 ```
 
-The diagram shows the topology and data flow of the system as built. The full architectural narrative, with screenshots and prose, lives in [`documents/measure-what-concise-drops.md`](./documents/measure-what-concise-drops.md).
+The diagram shows the topology and data flow of the system as built. The captured evidence for this run, including screenshots of what the tools actually returned, lives in [`documents/measure-what-concise-drops.md`](./documents/measure-what-concise-drops.md).
 
 ## Implementation
 
@@ -113,11 +113,11 @@ This system is built across **6 phases**:
 5. Reading the Scorecard: What the Numbers Say
 6. Writing a Custom Output Style
 
-For the full walkthrough with screenshots and step-by-step content, see [`documents/measure-what-concise-drops.md`](./documents/measure-what-concise-drops.md).
+For the run as it happened, with the screenshots taken at each step, see [`documents/measure-what-concise-drops.md`](./documents/measure-what-concise-drops.md).
 
 ## Validation
 
-Each build phase below is documented in [`documents/measure-what-concise-drops.md`](./documents/measure-what-concise-drops.md), with screenshots, configuration, and notes as captured during the build:
+Each phase below has its evidence in [`documents/measure-what-concise-drops.md`](./documents/measure-what-concise-drops.md), with the screenshots, configuration, and observed results recorded as the run happened:
 
 - ✅ Understanding the Experiment
 - ✅ Designing the Test: Six Prompts with Pre-Committed Required Items

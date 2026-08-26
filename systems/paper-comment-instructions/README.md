@@ -108,7 +108,7 @@ flowchart TD
     class Operator,Answer io
 ```
 
-The diagram shows the topology and data flow of the system as built. The full architectural narrative, with screenshots and prose, lives in [`documents/paper-comment-instructions.md`](./documents/paper-comment-instructions.md).
+The diagram shows the topology and data flow of the system as built. The captured evidence for this run, including screenshots of what the tools actually returned, lives in [`documents/paper-comment-instructions.md`](./documents/paper-comment-instructions.md).
 
 ## Implementation
 
@@ -121,11 +121,11 @@ This system is built across **6 phases**:
 5. Reading the File and Scoring the Prediction
 6. Isolating the Resolved Instruction
 
-For the full walkthrough with screenshots and step-by-step content, see [`documents/paper-comment-instructions.md`](./documents/paper-comment-instructions.md).
+For the run as it happened, with the screenshots taken at each step, see [`documents/paper-comment-instructions.md`](./documents/paper-comment-instructions.md).
 
 ## Validation
 
-Each build phase below is documented in [`documents/paper-comment-instructions.md`](./documents/paper-comment-instructions.md), with screenshots, configuration, and notes as captured during the build:
+Each phase below has its evidence in [`documents/paper-comment-instructions.md`](./documents/paper-comment-instructions.md), with the screenshots, configuration, and observed results recorded as the run happened:
 
 - ✅ Connecting Paper and Cursor via MCP
 - ✅ Defining the Experiment

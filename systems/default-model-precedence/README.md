@@ -102,7 +102,7 @@ flowchart TD
     class Operator,Order io
 ```
 
-The diagram shows the topology and data flow of the system as built. The full architectural narrative, with screenshots and prose, lives in [`documents/default-model-precedence.md`](./documents/default-model-precedence.md).
+The diagram shows the topology and data flow of the system as built. The captured evidence for this run, including screenshots of what the tools actually returned, lives in [`documents/default-model-precedence.md`](./documents/default-model-precedence.md).
 
 ## Implementation
 
@@ -114,11 +114,11 @@ This system is built across **5 phases**:
 4. Peeling the Stack to Find the Fallback Order
 5. Discovering the Fourth Layer
 
-For the full walkthrough with screenshots and step-by-step content, see [`documents/default-model-precedence.md`](./documents/default-model-precedence.md).
+For the run as it happened, with the screenshots taken at each step, see [`documents/default-model-precedence.md`](./documents/default-model-precedence.md).
 
 ## Validation
 
-Each build phase below is documented in [`documents/default-model-precedence.md`](./documents/default-model-precedence.md), with screenshots, configuration, and notes as captured during the build:
+Each phase below has its evidence in [`documents/default-model-precedence.md`](./documents/default-model-precedence.md), with the screenshots, configuration, and observed results recorded as the run happened:
 
 - ✅ Estimating the Precedence Order
 - ✅ Setting Up the Experiment

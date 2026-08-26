@@ -107,7 +107,7 @@ flowchart TD
     class Operator,Known io
 ```
 
-The diagram shows the topology and data flow of the system as built. The full architectural narrative, with screenshots and prose, lives in [`documents/subagent-nesting-wall.md`](./documents/subagent-nesting-wall.md).
+The diagram shows the topology and data flow of the system as built. The captured evidence for this run, including screenshots of what the tools actually returned, lives in [`documents/subagent-nesting-wall.md`](./documents/subagent-nesting-wall.md).
 
 ## Implementation
 
@@ -120,11 +120,11 @@ This system is built across **6 phases**:
 5. Proving the Wall Exists Both Ways
 6. Going Further: Concurrent vs. Nesting Limits
 
-For the full walkthrough with screenshots and step-by-step content, see [`documents/subagent-nesting-wall.md`](./documents/subagent-nesting-wall.md).
+For the run as it happened, with the screenshots taken at each step, see [`documents/subagent-nesting-wall.md`](./documents/subagent-nesting-wall.md).
 
 ## Validation
 
-Each build phase below is documented in [`documents/subagent-nesting-wall.md`](./documents/subagent-nesting-wall.md), with screenshots, configuration, and notes as captured during the build:
+Each phase below has its evidence in [`documents/subagent-nesting-wall.md`](./documents/subagent-nesting-wall.md), with the screenshots, configuration, and observed results recorded as the run happened:
 
 - ✅ Understanding the Experiment
 - ✅ Forming Predictions Before Running the Chain
