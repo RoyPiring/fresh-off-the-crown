@@ -10,6 +10,7 @@ This practice repository is built from NextWork projects, created via NextWork's
 - Measure Your Own Word Error Rate
 - Package a Claude Code Workflow
 - Probe Paper's Comments with an Agent
+- Test a Grok Bot Gmail Connector
 - Three Layers, One Model
 - Which Browser Did Claude Just Open?
 - Write a Grok Bot Skill Twice

@@ -20,6 +20,23 @@ systems:
   average: 9.0
   rationale: A cache status line grounded in the captured schema, not in labels that returned null
   featured: true
+- slug: gmail-connector-drafts
+  axis_scores:
+    technical_depth: 8
+    voice: 9
+    validation: 10
+  axis_reasoning:
+    technical_depth: Two independent connector requests with distinct subjects to test repeatability,
+      scope held to one integration, and messages left unsent so the send decision stays human.
+    voice: Refuses the connector's own report as evidence, records the destination fields as not run and
+      not measured until the search happened, and issues the verdict as conditional with three named expiry
+      conditions rather than as a permanent pass.
+    validation: 'The strongest evidence chain in this repo: existence measured twice under the same exact-subject
+      rule at 2 of 2, completeness audited separately on recipient, subject and body at 2 of 2, with 0
+      manual moves, nothing sent, and no object edited during verification.'
+  average: 9.0
+  rationale: Two drafts proven in the destination twice, never once from the connector saying so
+  featured: true
 - slug: personal-word-error-rate
   axis_scores:
     technical_depth: 9
@@ -122,7 +139,7 @@ systems:
       '
   average: 8.67
   rationale: Comment state proven as a control surface by one reset run, after a 3 of 3 score proved nothing
-  featured: true
+  featured: false
 - slug: default-model-precedence
   axis_scores:
     technical_depth: 8
