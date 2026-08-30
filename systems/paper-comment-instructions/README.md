@@ -34,7 +34,7 @@ flowchart TD
 
     subgraph Baseline["Three independent properties"]
         Rect[(Rectangle fill #D1D5DB)]
-        Text[(Text "Draft Heading")]
+        Text[("Text: Draft Heading")]
         Frame[(Frame padding 24px)]
         Independent{{One property each, so an outcome maps to one comment}}
         Recorded{{Baseline recorded before the agent runs}}

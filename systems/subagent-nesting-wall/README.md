@@ -27,14 +27,14 @@ flowchart TD
     Known[/Where the wall is, and how it announces itself/]
 
     subgraph Safety["Brake before the experiment"]
-        Budget(--max-budget-usd 2.00)
+        Budget("--max-budget-usd 2.00")
         WholeRun{{One ceiling for the parent AND every descendant, not $2 each}}
         Recursion{{A faulty stop rule turns a chain into geometric growth}}
     end
 
     subgraph Rig["One variable, one agent"]
         Workspace[(Build-level settings, global config untouched)]
-        Writer(depth-writer: log depth, stop at N==M, else spawn one child)
+        Writer("depth-writer: log depth, stop at N==M, else spawn one child")
         SameAgent{{Same definition at every link, so the link count is the only variable}}
         Log[(Append-only depth log)]
     end
@@ -60,7 +60,7 @@ flowchart TD
     end
 
     subgraph Run2["Run 2, the variable"]
-        EnvVar(CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1)
+        EnvVar("CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1")
         Cleared(Prior log removed so lines cannot carry over)
         One[(Log falls to one line)]
         Moves{{The variable moves the wall rather than being ignored}}
