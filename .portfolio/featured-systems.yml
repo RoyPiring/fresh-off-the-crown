@@ -1,29 +1,73 @@
 lens: fresh-off-the-crown
 featured_enabled: auto
 threshold: 6
-scored_at: '2026-08-27'
+scored_at: '2026-08-30'
 human_pin: []
 systems:
+- slug: prompt-cache-status-line
+  axis_scores:
+    technical_depth: 9
+    voice: 9
+    validation: 9
+  axis_reasoning:
+    technical_depth: Five property paths recovered by inspecting the captured payload after a label-based
+      draft returned null on every lookup, with display handling for a ratio and a token count.
+    voice: Separates disagreement from error by naming aggregation windows as the cause, and treats session
+      state as part of the evidence rather than as background.
+    validation: Verified 5 of 5 schema grounding, identical output across PowerShell 7 and 5.1 matching
+      the saved reading byte for byte, an exact cache-write match, and expected_rebuilds climbing 1 to
+      4 while misses held at 1.
+  average: 9.0
+  rationale: A cache status line grounded in the captured schema, not in labels that returned null
+  featured: true
 - slug: personal-word-error-rate
   axis_scores:
     technical_depth: 9
     voice: 9
     validation: 9
   axis_reasoning:
-    technical_depth: |
-      Sealed reference and sealed predictions written before any audio, one unrehearsed take
+    technical_depth: 'Sealed reference and sealed predictions written before any audio, one unrehearsed
+      take
+
       with no retakes, raw output scored untouched, and jiwer word-level alignment so the rate
+
       decomposes into substitutions, insertions and deletions rather than arriving as a verdict.
-    voice: |
-      Refutes its own obvious story rather than reporting the flattering one, states that two of
+
+      '
+    voice: 'Refutes its own obvious story rather than reporting the flattering one, states that two of
+
       three sealed predictions were wrong, and says plainly that the evidence does not support
+
       blaming technical vocabulary.
-    validation: |
-      Three comparable runs, 16.5% jargon against 15.4% plain and 24.2% on a second jargon take,
+
+      '
+    validation: 'Three comparable runs, 16.5% jargon against 15.4% plain and 24.2% on a second jargon
+      take,
+
       so the 1.1 point vocabulary gap against the 7.7 point capture swing is a genuinely
+
       discriminating result, and all three runs being deletion-heavy bounds the conclusion.
+
+      '
   average: 9.0
-  rationale: A sealed passage scored cold at 16.5%, where capture moved the rate seven times more than jargon
+  rationale: A sealed passage scored cold at 16.5%, where capture moved the rate seven times more than
+    jargon
+  featured: true
+- slug: packaged-workflow-payoff
+  axis_scores:
+    technical_depth: 8
+    voice: 9
+    validation: 9
+  axis_reasoning:
+    technical_depth: A nine-action workflow packaged into a workspace-local, session-loaded plugin with
+      strict validation before the timed run, so a silent partial load cannot masquerade as packaged.
+    voice: Refuses to let the flattering number stand for the result, keeps the 56% action cut explicitly
+      apart from effort, and records that no acceptance threshold was committed before the runs.
+    validation: Two measurements rather than one, 9 actions to 4 against 00:46 to 00:45, plus two consistent
+      passes and a fourth run that matched its prewritten failure condition and refused to repair the
+      target.
+  average: 8.67
+  rationale: Nine actions cut to four, and a clock that moved one second, kept apart on purpose
   featured: true
 - slug: subagent-nesting-wall
   axis_scores:
@@ -31,17 +75,26 @@ systems:
     voice: 9
     validation: 9
   axis_reasoning:
-    technical_depth: |
-      One depth-writer reused at every link so the link count is the only variable, build-level
+    technical_depth: 'One depth-writer reused at every link so the link count is the only variable, build-level
+
       configuration leaving global settings untouched, and a budget ceiling covering the parent
+
       and every descendant together rather than per agent.
-    voice: |
-      Records a prediction that missed and explains why the miss is worth keeping, and leads on
+
+      '
+    voice: 'Records a prediction that missed and explains why the miss is worth keeping, and leads on
+
       the hazard that a blocked level exits 0 rather than on the tidy result.
-    validation: |
-      Proven in both directions: four levels requested returns exactly three log lines, and the
+
+      '
+    validation: 'Proven in both directions: four levels requested returns exactly three log lines, and
+      the
+
       depth variable drops it to one while leaving depth 1 alive, with an identical refusal
+
       shape each time.
+
+      '
   average: 8.67
   rationale: The subagent nesting cap found at three links, and a blocked level that still exits 0
   featured: true
@@ -51,15 +104,22 @@ systems:
     voice: 9
     validation: 9
   axis_reasoning:
-    technical_depth: |
-      Three independent canvas properties carrying one comment each under three different
+    technical_depth: 'Three independent canvas properties carrying one comment each under three different
+
       conditions, wired through MCP, so an outcome maps to exactly one instruction.
-    voice: |
-      Names the headline 3 of 3 as hollow rather than banking it, and surfaces the hazard that
+
+      '
+    voice: 'Names the headline 3 of 3 as hollow rather than banking it, and surfaces the hazard that
+
       an unresolved observation with no number still got acted on with an invented value.
-    validation: |
-      The isolated rerun is clean causal evidence: reset the text, hold the wording, change only
+
+      '
+    validation: 'The isolated rerun is clean causal evidence: reset the text, hold the wording, change
+      only
+
       the resolution state, and only that property moved while the other two stayed put.
+
+      '
   average: 8.67
   rationale: Comment state proven as a control surface by one reset run, after a 3 of 3 score proved nothing
   featured: true
@@ -69,56 +129,83 @@ systems:
     voice: 9
     validation: 8
   axis_reasoning:
-    technical_depth: |
-      Each layer given a distinct model so a winner is identifiable, the account floor
+    technical_depth: 'Each layer given a distinct model so a winner is identifiable, the account floor
+
       established first, then layers removed one at a time to observe fallback.
-    voice: |
-      Points out that entries 1, 3 and 4 all displayed the same model for three different
+
+      '
+    voice: 'Points out that entries 1, 3 and 4 all displayed the same model for three different
+
       reasons, and refuses to claim the middle of the order because that comparison was never
+
       run.
-    validation: |
-      One genuinely unconfounded result carries it, a flag value that differs from the account
+
+      '
+    validation: 'One genuinely unconfounded result carries it, a flag value that differs from the account
+
       default beating a set environment variable, with the unresolved pair stated rather than
+
       implied.
+
+      '
   average: 8.33
   rationale: Four model-selection layers peeled apart, with the one unconfounded run naming the winner
-  featured: true
+  featured: false
 - slug: measure-what-concise-drops
   axis_scores:
     technical_depth: 8
     voice: 9
     validation: 8
   axis_reasoning:
-    technical_depth: |
-      Eighteen required items locked across six prompts before any run, scored strictly so
+    technical_depth: 'Eighteen required items locked across six prompts before any run, scored strictly
+      so
+
       implication does not count, with a custom output style authored and compared against both
+
       stock styles.
-    voice: |
-      Names three limits rather than discovering them later, including that the metric could not
+
+      '
+    voice: 'Names three limits rather than discovering them later, including that the metric could not
+
       discriminate at all because both styles scored perfectly.
-    validation: |
-      Real measurements throughout, 37 lines against 22 for a 41% cut with 18 of 18 retained by
+
+      '
+    validation: 'Real measurements throughout, 37 lines against 22 for a 41% cut with 18 of 18 retained
+      by
+
       both, and the custom style at 10 against 15 keeping two unscored details that change the
+
       next action.
+
+      '
   average: 8.33
-  rationale: A 41% shorter output style that dropped no scored fact, and a custom style that kept two more
-  featured: true
+  rationale: A 41% shorter output style that dropped no scored fact, and a custom style that kept two
+    more
+  featured: false
 - slug: browser-surface-routing
   axis_scores:
     technical_depth: 6
     voice: 9
     validation: 5
   axis_reasoning:
-    technical_depth: |
-      Both surfaces confirmed present before testing and a prediction written first, but the
+    technical_depth: 'Both surfaces confirmed present before testing and a prediction written first, but
+      the
+
       design failed to vary the one condition the question depended on.
-    voice: |
-      Calls its own reversal void instead of banking a matching result, leaves three
+
+      '
+    voice: 'Calls its own reversal void instead of banking a matching result, leaves three
+
       unverifiable fields blank rather than filling them, and attributes a user-reported
+
       observation as such.
-    validation: |
-      The baseline observation stands, but the test that was meant to prove the setting produced
+
+      '
+    validation: 'The baseline observation stands, but the test that was meant to prove the setting produced
+
       no information, so the central claim is unsupported and the Chrome leg is still owed.
+
+      '
   average: 6.67
   rationale: A routing setting whose reversal test was void, because both runs began from the same surface
   featured: false
@@ -128,16 +215,24 @@ systems:
     voice: 8
     validation: 5
   axis_reasoning:
-    technical_depth: |
-      Two skill versions and a batch carrying planted failures with expected outcomes written
+    technical_depth: 'Two skill versions and a batch carrying planted failures with expected outcomes
+      written
+
       first, but neither version ever received the numbered batch, so the comparison did not
+
       execute.
-    voice: |
-      Refuses to read 0 of 2 as a clean pass and states that the equal counts carry no
+
+      '
+    voice: 'Refuses to read 0 of 2 as a clean pass and states that the equal counts carry no
+
       information about filtering behaviour.
-    validation: |
-      The headline evidence is absent because no shortlist was returned; only the borderline
+
+      '
+    validation: 'The headline evidence is absent because no shortlist was returned; only the borderline
+
       wording rerun produced an intended-decision result.
+
+      '
   average: 6.33
   rationale: A four against six field skill A/B where equal scores meant no exposure, not correct rejections
   featured: false
