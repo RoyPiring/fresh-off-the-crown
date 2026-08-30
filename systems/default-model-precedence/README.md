@@ -27,7 +27,7 @@ flowchart TD
     Order[/A precedence order backed by observation/]
 
     subgraph Layers["Four candidate layers"]
-        Flag[(--model flag)]
+        Flag[("--model flag")]
         Settings[(settings.json model key)]
         EnvVar[(ANTHROPIC_MODEL)]
         Floor[(Account default: Opus 5)]
@@ -58,7 +58,7 @@ flowchart TD
     end
 
     subgraph Fourth["The disambiguating run"]
-        E6[(Entry 6: --model=haiku against ANTHROPIC_MODEL=opus)]
+        E6[("Entry 6: --model=haiku against ANTHROPIC_MODEL=opus")]
         FlagWins{{haiku won, and haiku is not the default, so the flag genuinely controls}}
     end
 
