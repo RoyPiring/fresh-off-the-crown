@@ -8,13 +8,11 @@ The AI tooling landscape ships more good news than any working engineer can act 
 
 ## Featured Systems
 
-- **[Write a Grok Bot Skill Twice](./systems/grok-bot-skill-contract/)**: a four-field and a six-field curation skill run against the same batch of planted failures, where the equal scores turned out to be a null result rather than a clean pass.
-- **[Measure What Concise Drops](./systems/measure-what-concise-drops/)**: six prompts and 18 pre-committed facts measuring whether a shorter output style drops anything, where the 41% cut cost no scored fact and a custom style kept two unscored details that change the next action.
-- **[Three Layers, One Model](./systems/default-model-precedence/)**: four config layers set to disagree to find which one actually picks the model, where three identical-looking results turned out to have three different causes.
-- **[Probe Paper's Comments with an Agent](./systems/paper-comment-instructions/)**: three canvas comments under three conditions to find whether an agent honours resolved state, where a 3 of 3 score proved nothing and one reset run proved everything.
-- **[Find the Wall](./systems/subagent-nesting-wall/)**: a four-level agent chain run against the default nesting cap, finding the wall after three links and a refusal that exits 0 without saying anything.
-- **[Which Browser Did Claude Just Open?](./systems/browser-surface-routing/)**: a setting that claims to route between two browsers, where the reversal test turned out void because both runs started from the same surface and proved nothing.
-- **[Measure Your Own Word Error Rate](./systems/personal-word-error-rate/)**: a sealed passage read once and scored with jiwer, where 16.5% against a published 4.0% was the small surprise and the capture-over-vocabulary result was the real one.
+- **[Measure Your Own Word Error Rate](./systems/personal-word-error-rate/)**: A sealed passage scored cold at 16.5%, where capture moved the rate seven times more than jargon
+- **[Find the Wall](./systems/subagent-nesting-wall/)**: The subagent nesting cap found at three links, and a blocked level that still exits 0
+- **[Probe Paper's Comments with an Agent](./systems/paper-comment-instructions/)**: Comment state proven as a control surface by one reset run, after a 3 of 3 score proved nothing
+- **[Three Layers, One Model](./systems/default-model-precedence/)**: Four model-selection layers peeled apart, with the one unconfounded run naming the winner
+- **[Measure What Concise Drops](./systems/measure-what-concise-drops/)**: A 41% shorter output style that dropped no scored fact, and a custom style that kept two more
 
 More land here as I build them, one at a time.
 
