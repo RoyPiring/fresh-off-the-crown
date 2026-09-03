@@ -1,7 +1,7 @@
 lens: fresh-off-the-crown
 featured_enabled: auto
 threshold: 6
-scored_at: '2026-08-30'
+scored_at: '2026-09-03'
 human_pin: []
 systems:
 - slug: prompt-cache-status-line
@@ -139,6 +139,42 @@ systems:
       '
   average: 8.67
   rationale: Comment state proven as a control surface by one reset run, after a 3 of 3 score proved nothing
+  featured: false
+- slug: insights-sealed-baseline
+  axis_scores:
+    technical_depth: 8
+    voice: 9
+    validation: 8
+  axis_reasoning:
+    technical_depth: A ten-item baseline sealed at a recorded time before the report file existed, nine
+      rows transcribed to stay findable in the source, and a reconciliation check tying both totals back
+      to their two independent sources.
+    voice: Audits its own best match and lets the correction cut against the tool, then keeps two limits
+      attached rather than smoothing them away, including a protocol breach the operator committed and
+      an unresolved session denominator.
+    validation: Four traceable measurements with the evidence order fixed by timestamps, and a self-audit
+      that moved the result from 4/5/6 to 3 confirmed, 6 new, 7 unraised. Row-to-item matching stays a
+      judgement call, and the 49-versus-71 denominator is unsettled.
+  average: 8.33
+  rationale: A report that raised 3 of 10 frictions already known, audited against a list sealed first
+  featured: false
+- slug: budget-cap-trip-wire
+  axis_scores:
+    technical_depth: 8
+    voice: 9
+    validation: 8
+  axis_reasoning:
+    technical_depth: Raw JSON captured before any field was read, decimal arithmetic preserved through
+      the subtraction, the API-key variable checked absent to fix credential precedence, and the same
+      cap exercised across two client modes.
+    voice: Refuses to let a local estimate stand in for billing, names the overshoot rather than the
+      clean stop as the finding, and appends the schema and scope divergences instead of editing the
+      original criteria.
+    validation: Two runs with distinct outcomes and distinct response shapes, an overshoot quantified at
+      roughly 9.7 times the cap, and a documentation contradiction found. No terminal was attached, so
+      the central scope question is unresolved and the three-attempt contrary test is still owed.
+  average: 8.33
+  rationale: A budget cap that stops after the spend, not before it, at roughly 9.7 times the limit
   featured: false
 - slug: default-model-precedence
   axis_scores:

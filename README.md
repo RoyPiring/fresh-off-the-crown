@@ -1,6 +1,6 @@
 # Fresh Off the Crown
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-1B4332?style=flat-square&labelColor=0d1117)](./LICENSE) [![Practice](https://img.shields.io/badge/AI%20Tooling-Practice-7E3FF2?style=flat-square&labelColor=0d1117)](https://github.com/RoyPiring) [![Systems](https://img.shields.io/badge/systems-10-2F5233?style=flat-square&labelColor=0d1117)](./INDEX.md) [![Updated](https://img.shields.io/badge/updated-2026--08--30-264653?style=flat-square&labelColor=0d1117)](./INDEX.md)
+[![License: MIT](https://img.shields.io/badge/license-MIT-1B4332?style=flat-square&labelColor=0d1117)](./LICENSE) [![Practice](https://img.shields.io/badge/AI%20Tooling-Practice-7E3FF2?style=flat-square&labelColor=0d1117)](https://github.com/RoyPiring) [![Systems](https://img.shields.io/badge/systems-12-2F5233?style=flat-square&labelColor=0d1117)](./INDEX.md) [![Updated](https://img.shields.io/badge/updated-2026--09--03-264653?style=flat-square&labelColor=0d1117)](./INDEX.md)
 
 > *Does this capability earn a place in how I actually work? A decision log with a build attached.*
 
@@ -24,4 +24,4 @@ Capabilities inside tools already in daily use, plus the vendor-independent part
 
 ## The road to 100
 
-**10 shipped, 90 to go.** The count moves only when a run actually happened, and it is never backfilled to keep a streak alive: **[browse the catalog in `INDEX.md`](./INDEX.md)**.
+**12 shipped, 88 to go.** The count moves only when a run actually happened, and it is never backfilled to keep a streak alive: **[browse the catalog in `INDEX.md`](./INDEX.md)**.
