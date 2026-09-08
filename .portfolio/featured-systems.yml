@@ -1,7 +1,7 @@
 lens: fresh-off-the-crown
 featured_enabled: auto
 threshold: 6
-scored_at: '2026-09-03'
+scored_at: '2026-09-07'
 human_pin: []
 systems:
 - slug: prompt-cache-status-line
@@ -70,6 +70,26 @@ systems:
   rationale: A sealed passage scored cold at 16.5%, where capture moved the rate seven times more than
     jargon
   featured: true
+- slug: effort-level-calibration
+  axis_scores:
+    technical_depth: 9
+    voice: 9
+    validation: 8
+  axis_reasoning:
+    technical_depth: A two-arm harness with the preregistration, attestation, checker and both starting
+      workspaces under SHA-256, byte-identical copies each failing independently before repair, separate
+      processes with distinct session IDs, and a preflight scan of 13 metered or routing variables that
+      aborted the first attempt on a base-URL override.
+    voice: States the scope limit as part of the evidence rather than as an exception added afterwards,
+      records an absent editor as absent instead of substituting one, and refuses to rank the effort
+      settings beyond the one repair actually measured.
+    validation: 'The tamper test is genuinely discriminating: one clause set false while every other control
+      passed still returned the safe default, proving the rule fails closed with no partial credit. Held
+      to 8 because the untampered comparison outcome is not reported and the fixture is a single invoice
+      repair.'
+  average: 8.67
+  rationale: A fail-closed effort rule where one false clause beat every passing control
+  featured: true
 - slug: packaged-workflow-payoff
   axis_scores:
     technical_depth: 8
@@ -114,7 +134,7 @@ systems:
       '
   average: 8.67
   rationale: The subagent nesting cap found at three links, and a blocked level that still exits 0
-  featured: true
+  featured: false
 - slug: paper-comment-instructions
   axis_scores:
     technical_depth: 8
