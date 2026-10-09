@@ -1,9 +1,40 @@
 lens: fresh-off-the-crown
 featured_enabled: auto
 threshold: 6
-scored_at: '2026-09-07'
+scored_at: '2026-10-09'
 human_pin: []
 systems:
+- slug: rerank-latency-verdict
+  axis_scores:
+    technical_depth: 9
+    voice: 9
+    validation: 9
+  axis_reasoning:
+    technical_depth: 'Four retrieval stages built and compared on one benchmark: dense with bge-small-en-v1.5,
+      sparse with bm25s, reciprocal rank fusion at constant 60, and a bge-reranker-v2-m3 cross-encoder
+      confined to the same 50 candidates so it reorders a fixed pool rather than introducing documents the
+      retrievers never surfaced. A shared loader returns one corpus, one query list and one label map that
+      all four rows consume, with identifiers cast to strings, so a changed score is attributable to the
+      ranking method. The toolchain is pinned to named versions and the models and SciFact are cached
+      locally, which takes network time out of the measured path. The deepest build in the pillar.'
+    voice: 'The register refuses the easy claim at every turn. The scope is declared as the 20-query run
+      only, with clinical guidelines, generated answers and the full test named as owed rather than
+      reported. The unfinished 300-query test is left unrun at an estimated 4.5 to 5 hours and no 30-query
+      stand-in is invented to fill the gap, which is the exact failure this pillar is most exposed to. And
+      the close-out is turned on itself: trace-scored at 3 untraceable claims out of 88, with the three
+      removed rather than explained, the teach-back losing two unsupported method phrases, the
+      after-action review dropping a claim of surprise that no retained evidence supported, and the
+      original score preserved rather than rewritten after the correction.'
+    validation: 'The scorer is attacked before any retrieval score is trusted. The nDCG denominator was
+      deliberately broken, the fixture expected 0.4982 and received 0.6509, and that failure was retained
+      in check-out.txt with the broken line left uncommitted, so a faulty calculation could not pass as a
+      quality gain merely for producing a larger number. Restoring the denominator returned the fixture to
+      0.4982, and an empty git diff on metrics.py proves the working scorer matches the committed passing
+      version. The result itself is signed rather than spun: Recall@5 at -0.025 against nDCG@5 at +0.072,
+      read beside a p95 of 60,388 ms, which is what makes the REJECT defensible instead of a preference.'
+  average: 9.0
+  rationale: Recall fell and nDCG rose at a p95 of 60,388 ms, so the mixed result did not repay the wait
+  featured: true
 - slug: prompt-cache-status-line
   axis_scores:
     technical_depth: 9
@@ -105,7 +136,7 @@ systems:
       target.
   average: 8.67
   rationale: Nine actions cut to four, and a clock that moved one second, kept apart on purpose
-  featured: true
+  featured: false
 - slug: subagent-nesting-wall
   axis_scores:
     technical_depth: 8

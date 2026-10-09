@@ -1,6 +1,6 @@
 # Fresh Off the Crown
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-1B4332?style=flat-square&labelColor=0d1117)](./LICENSE) [![Practice](https://img.shields.io/badge/AI%20Tooling-Practice-7E3FF2?style=flat-square&labelColor=0d1117)](https://github.com/RoyPiring) [![Systems](https://img.shields.io/badge/systems-13-2F5233?style=flat-square&labelColor=0d1117)](./INDEX.md) [![Updated](https://img.shields.io/badge/updated-2026--09--07-264653?style=flat-square&labelColor=0d1117)](./INDEX.md)
+[![License: MIT](https://img.shields.io/badge/license-MIT-1B4332?style=flat-square&labelColor=0d1117)](./LICENSE) [![Practice](https://img.shields.io/badge/AI%20Tooling-Practice-7E3FF2?style=flat-square&labelColor=0d1117)](https://github.com/RoyPiring) [![Systems](https://img.shields.io/badge/systems-14-2F5233?style=flat-square&labelColor=0d1117)](./INDEX.md) [![Updated](https://img.shields.io/badge/updated-2026--10--09-264653?style=flat-square&labelColor=0d1117)](./INDEX.md)
 
 > *Does this capability earn a place in how I actually work? A decision log with a build attached.*
 
@@ -8,11 +8,13 @@ The AI tooling landscape ships more good news than any working engineer can act 
 
 ## Featured Systems
 
+- **[Is Better Search Worth the Wait?](./systems/rerank-latency-verdict/)**: Recall fell and nDCG rose at a p95 of 60,388 ms, so the mixed result did not repay the wait
 - **[Measure Claude Code Prompt Cache](./systems/prompt-cache-status-line/)**: A cache status line grounded in the captured schema, not in labels that returned null
 - **[Test a Grok Bot Gmail Connector](./systems/gmail-connector-drafts/)**: Two drafts proven in the destination twice, never once from the connector saying so
 - **[Measure Your Own Word Error Rate](./systems/personal-word-error-rate/)**: A sealed passage scored cold at 16.5%, where capture moved the rate seven times more than jargon
 - **[Calibrate Claude Code Effort](./systems/effort-level-calibration/)**: A fail-closed effort rule where one false clause beat every passing control
-- **[Package a Claude Code Workflow](./systems/packaged-workflow-payoff/)**: Nine actions cut to four, and a clock that moved one second, kept apart on purpose
+
+_+ 9 other systems in the full catalog: [`INDEX.md`](./INDEX.md)._
 
 More land here as I build them, one at a time.
 
@@ -24,4 +26,4 @@ Capabilities inside tools already in daily use, plus the vendor-independent part
 
 ## The road to 100
 
-**13 shipped, 87 to go.** The count moves only when a run actually happened, and it is never backfilled to keep a streak alive: **[browse the catalog in `INDEX.md`](./INDEX.md)**.
+**14 shipped, 86 to go.** The count moves only when a run actually happened, and it is never backfilled to keep a streak alive: **[browse the catalog in `INDEX.md`](./INDEX.md)**.
